@@ -2,28 +2,31 @@ package com.sinensia;
 
 public class Coche extends Vehiculos{
 
-    private String modelo;
-    private int potencia;
-    private int añoDeMatriculacion;
-    private String color;
-    private String dueño;
-    private static int numeroDeRuedas;  
+
+    private final int numeroDeRuedas;  
 
 
 
 
-    public Coche(String modelo, int potencia, int añoDeMatriculacion, String color, String dueño, int numeroDeRuedas){
+    public Coche(String modelo, int potencia, int anioDeMatriculacion, String color, String dueño, int numeroDeRuedas, String matricula){
         
-        super(modelo, potencia, añoDeMatriculacion, color, dueño);
-        this.numeroDeRuedas = numeroDeRuedas;
-        this.numeroDeRuedas = numeroDeRuedas;
+        super(modelo, potencia, anioDeMatriculacion, color, dueño, matricula);
+        this.numeroDeRuedas = 4;
 
     }
 
-    public void arrancarCoche(){
-    super.arrancar();
+    @Override
+    public void arrancar() {
+        System.out.println("Coche arrancado");
+    }
 
-    super.apagar();
+    @Override
+    public void apagar(){
+        System.out.println("Coche apagado");
+    }
+
+    public void bajarVentanilla(){
+        System.out.println("Bajando las ventillas del coche: "+ this.getModelo() +" de color: " + this.getColor() + "con potencia de: " + this.getPotencia() + " y de matricula " + this.getMatricula());
     }
 
 }   

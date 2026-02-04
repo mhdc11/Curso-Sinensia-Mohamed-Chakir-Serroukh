@@ -3,17 +3,18 @@ package com.sinensia;
 public abstract class Vehiculos {
     private String modelo;
     private int potencia;
-    private int añoDeMatriculacion;
+    private int anioDeMatriculacion;
     private String color;
-    private String dueño;    
-
+    private String duenio;    
+    private String matricula;
     
-    public Vehiculos (String modelo, int potencia, int añoDeMatriculacion, String color, String dueño) {
+    protected Vehiculos (String modelo, int potencia, int anioDeMatriculacion, String color, String duenio, String matricula) {
         this.modelo = modelo;
         this.potencia = potencia;
-        this.añoDeMatriculacion = añoDeMatriculacion;
+        this.anioDeMatriculacion = anioDeMatriculacion;
         this.color = color;
-        this.dueño = dueño;
+        this.duenio = duenio;
+        this.matricula = matricula;
     }
 
 
@@ -25,6 +26,13 @@ public abstract class Vehiculos {
         this.modelo = modelo;
     }
 
+    public String getMatricula() {
+        return matricula;
+    }
+
+    public void setMatricula(String matricula) {
+        this.matricula = matricula;
+    }
     public int getPotencia() {
         return potencia;
     }
@@ -33,12 +41,12 @@ public abstract class Vehiculos {
         this.potencia = potencia;
     }
 
-    public int getAñoDeMatriculacion() {
-        return añoDeMatriculacion;
+    public int getAnioDeMatriculacion() {
+        return anioDeMatriculacion;
     }
 
-    public void setAñoDeMatriculacion(int añoDeMatriculacion) {
-        this.añoDeMatriculacion = añoDeMatriculacion;
+    public void setAnioDeMatriculacion(int anioDeMatriculacion) {
+        this.anioDeMatriculacion = anioDeMatriculacion;
     }
 
     public String getColor() {
@@ -49,21 +57,17 @@ public abstract class Vehiculos {
         this.color = color;
     }
 
-    public String getDueño() {
-        return dueño;
+    public String getDuenio() {
+        return duenio;
     }
 
-    public void setDueño(String dueño) {
-        this.dueño = dueño;
+    public void setDuenio(String duenio) {
+        this.duenio = duenio;
     }
 
-    public void arrancar(){
-        System.out.println("ARRANCO COCHE");
-    }
+    public abstract void arrancar();
 
-    public void apagar(){
-        System.out.println("APAGO COCHE");
-    }
+    public abstract void apagar();
 
 
 
