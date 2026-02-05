@@ -8,9 +8,9 @@ public class Coche extends Vehiculos{
 
 
 
-    public Coche(String modelo, int potencia, int anioDeMatriculacion, String color, String dueño, int numeroDeRuedas, String matricula){
+    public Coche(String modelo, Integer precio,int potencia, int anioDeMatriculacion, String color, String duenio, int numeroDeRuedas, String matricula){
         
-        super(modelo, potencia, anioDeMatriculacion, color, dueño, matricula);
+        super(modelo, precio, potencia, anioDeMatriculacion, color, duenio, matricula);
         this.numeroDeRuedas = 4;
 
     }

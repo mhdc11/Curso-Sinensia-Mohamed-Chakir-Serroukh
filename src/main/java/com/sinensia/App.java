@@ -9,11 +9,16 @@ public class App {
         Scanner sc = new Scanner(System.in);
         int numeroDeSelecciónDeMenu;
         Duenio chakir = new Duenio("48081738P", "Mohamed Chakir Serroukh");
-
+        Concesionario concesionario = new Concesionario("MC Car's and Motors");
+        Coche seatIbiza     = null;
+        Coche toyotaCorolla = null;
+        Coche bmwSerie3     = null;
+        Coche audiA3        = null;
+                    
         do{
             System.out.println("Selecciona un número del Menú: ");
-            System.out.println("1-) Crear Coches");
-            System.out.println("2-) Crear Motos");
+            System.out.println("1-) Mostrar la lista de los coches disponibles");
+            System.out.println("2-) Mostrar la lista de las motos disponibles");
             System.out.println("3-) Ver Coches");
             System.out.println("4-) Ver Motos");
             System.out.println("5-) Añadir Coches");
@@ -25,16 +30,10 @@ public class App {
 
             switch (numeroDeSelecciónDeMenu) {
                 case 1 :
-                    Coche seatIbiza     = new Coche("Ibiza",      95, 2024, "Rojo",    "Chakir", 4, "0002DEF");
-                    Coche toyotaCorolla = new Coche("Corolla",   122, 2025, "Blanco",  "Mohamed", 4, "0003GHI");
-                    Coche bmwSerie3     = new Coche("Serie 3",   150, 2023, "Azul",    "Serroukh", 4, "0004JKL");
-                    Coche audiA3        = new Coche("A3",        116, 2022, "Gris",    "Serroukh", 4, "0005MNO");
+                    concesionario.mostrarListaDeCochesDisponibles();
                     break;
                 case 2 :
-                    Moto yamahaMt07    = new Moto("MT-07",   73, 2023, "Negro",  "Chakir",  2, "M-1002-DEF");
-                    Moto kawasakiZ650  = new Moto("Z650",    67, 2022, "Verde",  "Serroukh",2, "M-1003-GHI");
-                    Moto bmwG310R      = new Moto("G 310 R", 34, 2025, "Azul",   "Mohamed", 2, "M-1004-JKL");
-                    Moto ducatiMonster = new Moto("Monster", 82, 2026, "Rojo",   "Chakir",  2, "M-1005-MNO");
+                    concesionario.mostrarListaDeMotosDisponibles();                    
                     break;
                 case 3 :
                     chakir.mostrarCochesEnPropiedad();
@@ -43,6 +42,13 @@ public class App {
                     System.out.println("numero 4");
                     break;
                 case 5 :
+                    //Aquí es la de añadir coches
+                    try {
+                        chakir.aniadirCoche(audiA3);
+                    
+                    } catch (IllegalArgumentException e) {
+                        System.out.println(e.getMessage());
+                    }
                     System.out.println("numero 5");
                     break;
                 case 6 :
@@ -57,7 +63,7 @@ public class App {
             }
 
         }while(numeroDeSelecciónDeMenu != 0);
-        Concesionario concesionario = new Concesionario();
+        
 
 
 
@@ -68,16 +74,6 @@ public class App {
         //concesionario.crearMotos();
         //Moto hondaPcx125   = new Moto("PCX 125", 12, 2024, "Blanco", "Mohamed", 2, "M-1001-ABC");
         
-        Coche coche1 = concesionario.crearCoches();
-        Moto moto1 = concesionario.crearMotos();
-
-        coche1.arrancar();
-        coche1.apagar();
-        coche1.bajarVentanilla();
-
-        moto1.arrancar();
-        moto1.apagar();
-        moto1.hacerCaballito(moto1);
 
 
     }

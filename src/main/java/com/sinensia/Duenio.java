@@ -35,7 +35,30 @@ public class Duenio {
     }
 
     public void aniadirCoche(Coche coche){
-        this.cochesEnPropiedad.add(coche);
+        
+            if(coche == null){
+                System.out.println("El coche que me has pasado no existe");
+            }else{
+                if (this.cochesEnPropiedad.isEmpty()) {
+                    this.cochesEnPropiedad.add(coche);
+
+                } else {
+                    for (int i = 0; i < this.cochesEnPropiedad.size(); i++) {
+                    System.out.println("He entrado al for en la vuelta "+ i);
+                    if(coche.equals(this.cochesEnPropiedad.get(i))){
+                        System.out.println("Este coche ya existe");
+                    }else{
+                        System.out.println("Coches añadido");
+                        this.cochesEnPropiedad.add(coche);
+
+                    }
+                }
+                
+                }
+
+            }
+
+        
     }
 
     public void mostrarCochesEnPropiedad(){
@@ -50,8 +73,6 @@ public class Duenio {
             }
         }
         
-
-
 
     }
 

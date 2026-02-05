@@ -7,14 +7,24 @@ public abstract class Vehiculos {
     private String color;
     private String duenio;    
     private String matricula;
+    private Integer precio;
     
-    protected Vehiculos (String modelo, int potencia, int anioDeMatriculacion, String color, String duenio, String matricula) {
+    protected Vehiculos (String modelo, Integer precio ,int potencia, int anioDeMatriculacion, String color, String duenio, String matricula) {
         this.modelo = modelo;
+        this.precio = precio;
         this.potencia = potencia;
         this.anioDeMatriculacion = anioDeMatriculacion;
         this.color = color;
         this.duenio = duenio;
         this.matricula = matricula;
+    }
+
+    public Integer getPrecio() {
+        return precio;
+    }
+
+    public void setModelo(Integer precio) {
+        this.precio = precio;
     }
 
 

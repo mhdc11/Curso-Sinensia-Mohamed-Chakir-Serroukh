@@ -5,10 +5,10 @@ public class Moto extends Vehiculos{
 
     private final int numeroDeRuedas;
 
-        public Moto (String modelo, int potencia, int anioDeMatriculacion, String color, String duenio, int numeroDeRuedas, String matricula){
+        public Moto (String modelo, Integer precio, int potencia, int anioDeMatriculacion, String color, String duenio, int numeroDeRuedas, String matricula){
         
-        super(modelo, potencia, anioDeMatriculacion, color, duenio, matricula);
-        this.numeroDeRuedas = 4;
+        super(modelo, precio, potencia, anioDeMatriculacion, color, duenio, matricula);
+        this.numeroDeRuedas = 2;
 
     }
 
