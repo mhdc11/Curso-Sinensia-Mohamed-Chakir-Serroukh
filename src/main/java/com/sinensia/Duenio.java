@@ -34,8 +34,27 @@ public class Duenio {
         this.nombreCompleto = nombreCompleto;
     }
 
-    public void aniadirCoche(Coche coche){
+    public void aniadirCoche(Concesionario concesionario){
         
+        IO.print("¿Que coche le interesa?");
+
+        for (Coche coche : concesionario.listaCochesEnVenta){
+            IO.println("Coche");
+            IO.println("   -Modelo            : " + coche.getModelo());
+            IO.println("   -Precio            : " + coche.getPrecio() + " €");
+            IO.println("   -Color             : " + coche.getColor());
+            IO.println("   -Potencia          : " + coche.getPotencia() + " CV");
+            IO.println("   -Año matriculación : " + coche.getAnioDeMatriculacion());
+            IO.println("");
+        }
+
+    
+
+}
+
+    
+
+            /*
             if(coche == null){
                 System.out.println("El coche que me has pasado no existe");
             }else{
@@ -44,22 +63,23 @@ public class Duenio {
 
                 } else {
                     for (int i = 0; i < this.cochesEnPropiedad.size(); i++) {
-                    System.out.println("He entrado al for en la vuelta "+ i);
-                    if(coche.equals(this.cochesEnPropiedad.get(i))){
-                        System.out.println("Este coche ya existe");
-                    }else{
-                        System.out.println("Coches añadido");
-                        this.cochesEnPropiedad.add(coche);
-
+                        System.out.println("He entrado al for en la vuelta "+ i);
+                            if(coche.equals(this.cochesEnPropiedad.get(i))){
+                                System.out.println("Este coche ya existe");
+                            }else{
+                                System.out.println("Coches añadido");
+                                this.cochesEnPropiedad.add(coche);
+                        }
                     }
-                }
                 
                 }
 
             }
+            
+            */
 
         
-    }
+    
 
     public void mostrarCochesEnPropiedad(){
         
