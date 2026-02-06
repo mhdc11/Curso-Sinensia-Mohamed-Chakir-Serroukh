@@ -8,6 +8,9 @@ public class Concesionario {
     //esta se encarga de crear los vehículos
     public List <Coche> listaCochesEnVenta = new ArrayList<>();
     public List <Moto> listaMotosEnVenta = new ArrayList<>();
+    public int [] listaDeCochesVendidos;
+    public int [] listaDeMotosVendidos;
+    
 
     public Concesionario(String NombreConcesionario){
         this.nombreConcesionario = nombreConcesionario;
@@ -40,7 +43,8 @@ public class Concesionario {
         listaCochesEnVenta.add(toyotaCorolla);
         listaCochesEnVenta.add(hyundaiI30);
 
-
+        listaDeCochesVendidos = new int [listaCochesEnVenta.size()];
+    
 
     }
 
@@ -68,6 +72,9 @@ public class Concesionario {
         listaMotosEnVenta.add(yamahaMT09);
         listaMotosEnVenta.add(hondaCB650);
         listaMotosEnVenta.add(kawasakiZ900);
+
+        listaDeMotosVendidos = new int [listaMotosEnVenta.size()];
+
 
    
     }

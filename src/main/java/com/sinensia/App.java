@@ -19,8 +19,8 @@ public class App {
             System.out.println("Selecciona un número del Menú: ");
             System.out.println("1-) Mostrar la lista de los coches disponibles");
             System.out.println("2-) Mostrar la lista de las motos disponibles");
-            System.out.println("3-) Ver Coches");
-            System.out.println("4-) Ver Motos");
+            System.out.println("3-) Mostrar coches en propiedad");
+            System.out.println("4-) Mostrar motos en propiedad");
             System.out.println("5-) Añadir Coches");
             System.out.println("6-) Añadir Moto");
             System.out.println("7-) Probar coche");
