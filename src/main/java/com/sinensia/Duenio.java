@@ -1,6 +1,9 @@
 package com.sinensia;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
 
 public class Duenio {
 
@@ -37,6 +40,12 @@ public class Duenio {
     public void aniadirCoche(Concesionario concesionario){
         
         IO.print("¿Que coche le interesa?");
+
+        concesionario.listaCochesEnVenta.stream().sorted().toList().forEach(IO::println);
+
+        
+
+        
 
         for (Coche coche : concesionario.listaCochesEnVenta){
             IO.println("Coche");

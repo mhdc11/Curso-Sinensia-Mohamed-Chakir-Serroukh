@@ -1,6 +1,8 @@
 package com.sinensia;
 
-public class Coche extends Vehiculos{
+import java.util.Objects;
+
+public class Coche extends Vehiculo{
 
 
     private final int numeroDeRuedas;  
@@ -17,6 +19,7 @@ public class Coche extends Vehiculos{
 
     @Override
     public void arrancar() {
+        
         System.out.println("Coche arrancado");
     }
 
@@ -28,6 +31,24 @@ public class Coche extends Vehiculos{
     public void bajarVentanilla(){
         System.out.println("Bajando las ventillas del coche: "+ this.getModelo() +" de color: " + this.getColor() + "con potencia de: " + this.getPotencia() + " y de matricula " + this.getMatricula());
     }
+
+     @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null) return false;
+        if (getClass() != obj.getClass()) return false;
+
+        Coche other = (Coche) obj;
+
+        return getMatricula() != null && getMatricula().equals(other.getMatricula());
+    }
+    
+    @Override
+    public int compareTo(Coche other) {
+        return this.getPrecio().compareTo(other.getPrecio());
+        
+    }
+
 
 }   
 

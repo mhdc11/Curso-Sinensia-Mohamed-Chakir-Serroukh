@@ -1,6 +1,6 @@
 package com.sinensia;
 
-public class Moto extends Vehiculos{
+public class Moto extends Vehiculo{
 
 
     private final int numeroDeRuedas;

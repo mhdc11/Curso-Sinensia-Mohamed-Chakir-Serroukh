@@ -1,6 +1,10 @@
 package com.sinensia;
 
-public abstract class Vehiculos {
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Objects;
+
+public abstract class Vehiculo implements Comparable <Vehiculo>{
     private String modelo;
     private int potencia;
     private int anioDeMatriculacion;
@@ -9,7 +13,7 @@ public abstract class Vehiculos {
     private String matricula;
     private Integer precio;
     
-    protected Vehiculos (String modelo, Integer precio ,int potencia, int anioDeMatriculacion, String color, String duenio, String matricula) {
+    protected Vehiculo (String modelo, Integer precio ,int potencia, int anioDeMatriculacion, String color, String duenio, String matricula) {
         this.modelo = modelo;
         this.precio = precio;
         this.potencia = potencia;
@@ -23,7 +27,7 @@ public abstract class Vehiculos {
         return precio;
     }
 
-    public void setModelo(Integer precio) {
+    public void setPrecio(Integer precio) {
         this.precio = precio;
     }
 
@@ -78,6 +82,21 @@ public abstract class Vehiculos {
     public abstract void arrancar();
 
     public abstract void apagar();
+
+
+    @Override
+        public int hashCode() {
+        return Objects.hash(matricula);
+    }
+    
+
+   
+
+    
+
+
+    
+
 
 
 
